@@ -7,8 +7,8 @@ var burger = {
       callback(res);
     });
   },
-  insertOne: function(vals, callback) {
-    orm.insertOne(vals, function(res) {
+  insertOne: function(cols, vals, callback) {
+    orm.insertOne(cols, vals, function(res) {
       callback(res);
     });
   },

@@ -11,13 +11,18 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log("HandleBars object: " + hbsObject);
+    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
 router.post("/", function(req, res) {
-  burger.insertOne([req.body.burger_name], function() {
+  burger.insertOne([
+    "burger_name"
+    ], [
+    req.body.burger_name 
+  ], function() {
+    console.log("Burger Successfully Saved!");
     res.redirect("/");
   });
 });

@@ -1,6 +1,15 @@
 // Import MySQL connection.
 var connection = require("./connection.js");
 
+function printQuestionMarks(num) {
+  var arr = [];
+
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
+
+  return arr.toString();
+}
 
 // Helper function for SQL syntax.
 function objToSql(ob) {
@@ -25,9 +34,18 @@ var orm = {
       callback(result);
     });
   },
-  insertOne: function(vals) {
-  	var queryString = "INSERT INTO burgers (burger_name) VALUES ?";
-  	connection.query(queryString, vals, function(err, result) {
+
+  // LOOK AT THE 15-SEQUELIZE-01-CHIRPY EXAMPLE TO HELP HERE!!! //
+  insertOne: function(cols, vals, callback) {
+    var queryString = "INSERT INTO burgers (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+  	
+console.log(queryString);
+    connection.query(queryString, vals, function(err, result) {
   		if (err) {
   			throw err;
   		}
