@@ -1,0 +1,50 @@
+html {
+	margin: 0;
+	min-height: 100%;
+	}
+
+body {
+	background-color: #DDDDDD;
+	background-image: url(../images/legoFLDSMDFR.jpg);
+	background-position: top;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+h1 {
+	color: red;
+	font-weight: bolder;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.container {
+	position: relative;
+	background-color: #ffffff;
+	opacity: 0.75;
+	margin-bottom: 10px;
+	margin-top: 25px;
+	padding: 25px;
+	border: #DDD solid 2px;
+	max-width: 60%;
+}
+
+.col {
+	border: 1px solid red;
+	margin: 10px;
+	padding: 10px;
+}
+
+#devouredBurgers {
+	color: #BBB;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	margin: 20px 0;
+}

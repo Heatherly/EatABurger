@@ -1,5 +1,4 @@
 <h1 class="text-center">Eat-A-Burger!</h1>
-<hr>
 
   <div class="row">
     <div class="col md 6">
@@ -14,7 +13,7 @@
 
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="true">
-                <button type="submit">Eat Me!</button>
+                <button class="btn btn-warning btn-sm" type="submit">Eat Me!</button>
               </form>
 
             </li>
@@ -23,7 +22,7 @@
       </ul>
     </div>
 
-    <div class="col md 6">
+    <div class="col md 6" id="devouredBurgers">
       <h2>Devoured Burgers!</h2>
 
       <ul>
@@ -34,7 +33,7 @@
 
               <form action="/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="false">
-                <button type="submit">Make a new one!</button>
+                <button class="btn btn-secondary btn-sm" type="submit">Make a new one!</button>
               </form>
 
             </li>
@@ -44,7 +43,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row text-center">
     <div class="col md 12">
 
       <h2>Add a New Burger</h2>
@@ -54,7 +53,7 @@
           <label for="bur">Burger Name:</label>
           <input type="text" id="bur" name="burger_name">
         </div>
-        <button type="submit">Add Burger</button>
+        <button class="btn btn-danger" type="submit">Add Burger</button>
       </form>
     </div>
   </div>
