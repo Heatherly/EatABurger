@@ -1,5 +1,5 @@
 ### Eat-A-Burger Schema
--- DROP DATABASE IF EXISTS burgers_DB;
+DROP DATABASE IF EXISTS burgers_DB;
 
 CREATE DATABASE burgers_db;
 USE burgers_db;
